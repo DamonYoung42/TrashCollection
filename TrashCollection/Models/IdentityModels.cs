@@ -27,7 +27,10 @@ namespace TrashCollection.Models
 
         public static ApplicationDbContext Create()
         {
+            
             return new ApplicationDbContext();
         }
+
+        public DbSet<UserProfile> UserProfile { get; set; }
     }
 }
