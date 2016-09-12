@@ -1,5 +1,8 @@
-﻿using Microsoft.Owin;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin;
 using Owin;
+using TrashCollection.Models;
 
 [assembly: OwinStartupAttribute(typeof(TrashCollection.Startup))]
 namespace TrashCollection
@@ -13,11 +16,11 @@ namespace TrashCollection
         }
 
         private void CreateRolesAndUsers()
-       {
+        {
             ApplicationDbContext context = new ApplicationDbContext();
 
-            //var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
-            //var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));   
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+            var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));   
    
    
                 // In Startup iam creating first Admin Role and creating a default Admin User    
@@ -32,10 +35,10 @@ namespace TrashCollection
                     //Here we create a Admin super user who will maintain the website                  
    
                     var user = new ApplicationUser();
-                    user.UserName = "shanu";   
-                    user.Email = "syedshanumcain@gmail.com";   
+                    user.UserName = "admin";   
+                    user.Email = "damonyoung@wi.rr.com";   
    
-                    string userPWD = "A@Z200711";
+                    string userPWD = "Admin@";
 
                     var chkUser = UserManager.Create(user, userPWD);   
    
@@ -44,8 +47,8 @@ namespace TrashCollection
                     {   
                         var result1 = UserManager.AddToRole(user.Id, "Admin");
 
-        }
-    }   
+                    }
+                }   
    
                 // creating Creating Manager role    
                 if (!roleManager.RoleExists("Customer"))   

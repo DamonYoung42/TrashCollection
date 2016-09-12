@@ -82,3 +82,4 @@ C:\Users\usf00_000\Documents\DevCodeCamp\Projects\TrashCollection\TrashCollectio
 C:\Users\usf00_000\Documents\DevCodeCamp\Projects\TrashCollection\TrashCollection\obj\Debug\TrashCollection.pdb
 C:\Users\usf00_000\Documents\DevCodeCamp\Projects\TrashCollection\TrashCollection\obj\Debug\TrashCollection.Migrations.initialmigration.resources
 C:\Users\usf00_000\Documents\DevCodeCamp\Projects\TrashCollection\TrashCollection\obj\Debug\TrashCollection.csproj.GenerateResource.Cache
+C:\Users\usf00_000\Documents\DevCodeCamp\Projects\TrashCollection\TrashCollection\obj\Debug\TrashCollection.Migrations.userroles.resources

@@ -205,6 +205,10 @@
     <Compile Include="Migrations\201609122042329_initial migration.Designer.cs">
       <DependentUpon>201609122042329_initial migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609122207431_user roles.cs" />
+    <Compile Include="Migrations\201609122207431_user roles.Designer.cs">
+      <DependentUpon>201609122207431_user roles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Addresses.cs" />
@@ -298,6 +302,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201609122042329_initial migration.resx">
       <DependentUpon>201609122042329_initial migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609122207431_user roles.resx">
+      <DependentUpon>201609122207431_user roles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
