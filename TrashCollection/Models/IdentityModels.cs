@@ -31,6 +31,7 @@ namespace TrashCollection.Models
             return new ApplicationDbContext();
         }
 
+<<<<<<< HEAD
         public DbSet<Address> Address { get; set; }
         public DbSet<City> City { get; set; }
         public DbSet<Country> Country { get; set; }
@@ -42,5 +43,18 @@ namespace TrashCollection.Models
         public DbSet<Subscription> Subscription { get; set; }
         public DbSet<UserProfile> UserProfile { get; set; }
         public DbSet<Zipcode> Zipcode { get; set; }
+=======
+        public virtual DbSet<Addresses> Address { get; set; }
+        public virtual DbSet<Cities> City { get; set; }
+        public virtual DbSet<Countries> Country { get; set; }
+        public virtual DbSet<CustomerPickupJuncture> CustomerPickupJuncture { get; set; }
+        public virtual DbSet<Customers> Customer { get; set; }
+        public virtual DbSet<Employees> Employee { get; set; }
+        public virtual DbSet<Pickups> Pickup { get; set; }
+        public virtual DbSet<States> State { get; set; }
+        public virtual DbSet<Subscriptions> Subscription { get; set; }
+        public virtual DbSet<UserProfile> UserProfile { get; set; }
+        public virtual DbSet<Zipcodes> Zipcode { get; set; }
+>>>>>>> c75517aed86ee9548fcd3f949f9f7c99d53373d4
     }
 }
