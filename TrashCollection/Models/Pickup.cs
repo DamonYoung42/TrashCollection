@@ -8,8 +8,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrashCollection.Models
 {
-    public class Pickups
+    public class Pickup
     {
+        public Pickup()
+        {
+
+        }
         [Key]
         public int PickupID { get; set; }
         public DateTime PickupDate { get; set; }
@@ -19,11 +23,11 @@ namespace TrashCollection.Models
 
         [ForeignKey("Customer")]
         public int CustomerID { get; set; }
-        public Customers Customer { get; set; }
+        public Customer Customer { get; set; }
 
         [ForeignKey("Employee")]
         public int EmployeeID { get; set; }
-        public Employees Employee { get; set; }
+        public Employee Employee { get; set; }
 
 
     }

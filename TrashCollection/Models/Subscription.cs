@@ -7,19 +7,23 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrashCollection.Models
 {
-    public class Subscriptions
+    public class Subscription
     {
+        public Subscription()
+        {
+
+        }
         [Key]
         public int SubscriptionID { get; set; }
 
         [ForeignKey("Pickup")]
         public int PickupID { get; set; }
-        public Pickups Pickup { get; set; }
+        public Pickup Pickup { get; set; }
 
 
         [ForeignKey("Customer")]
         public int CustomerID { get; set; }
-        public Customers Customer { get; set; }
+        public Customer Customer { get; set; }
 
         public decimal Fee { get; set; }
         public decimal AmountPaid { get; set; }

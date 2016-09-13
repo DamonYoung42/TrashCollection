@@ -7,10 +7,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrashCollection.Models
 {
-    public class Countries
+    public class Zipcode
     {
+        public Zipcode()
+        {
+
+        }
         [Key]
-        public int CountryID { get; set; }
-        public string CountryName { get; set; }
+        public int ZipID {get; set;}
+        public string ZipcodeName { get; set; }
+
+
     }
 }

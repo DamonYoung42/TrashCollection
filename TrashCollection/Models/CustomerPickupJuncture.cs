@@ -9,17 +9,21 @@ namespace TrashCollection.Models
 {
     public class CustomerPickupJuncture
     {
+        public CustomerPickupJuncture()
+        {
+
+        }
         [Key]
         public int CustomerPickupJunctureID {get; set;}
 
-        [ForeignKey("Customers")]
+        [ForeignKey("Customer")]
         public int CustomerID { get; set; }
 
-        public Customers Customer { get; set; }
+        public Customer Customer { get; set; }
 
         [ForeignKey("Pickup")]
         public int PickupID { get; set; }
-        public Pickups Pickup { get; set; }
+        public Pickup Pickup { get; set; }
 
 
     }

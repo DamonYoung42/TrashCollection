@@ -8,8 +8,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrashCollection.Models
 {
-    public class Addresses
+    public class Address
     {
+        public Address()
+        {
+
+        }
+
         [Key]
         public int AddressID { get; set; }
         public string Street1 { get; set;}
@@ -17,14 +22,14 @@ namespace TrashCollection.Models
 
         [ForeignKey("City")]
         public int CityID { get; set; }
-        public Cities City { get; set; }
+        public City City { get; set; }
         [ForeignKey("State")]
         public string StateID { get; set; }
-        public States State { get; set; }
+        public State State { get; set; }
 
 
         [ForeignKey("Zipcode")]
         public int ZipID { get; set; }
-        public Zipcodes Zipcode { get; set; }
+        public Zipcode Zipcode { get; set; }
     }
 }
