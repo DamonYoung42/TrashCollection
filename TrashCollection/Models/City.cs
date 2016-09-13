@@ -7,18 +7,22 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrashCollection.Models
 {
-    public class Cities
+    public class City
     {
+        public City()
+        {
+
+        }
         [Key]
         public int CityID { get; set; }
         public string CityName { get; set; }
 
         [ForeignKey("State")]
         public string StateID { get; set; }
-        public States State { get; set; }
+        public State State { get; set; }
 
         [ForeignKey("Zipcode")]
         public string ZipID { get; set; }
-        public Zipcodes Zipcode { get; set; }
+        public Zipcode Zipcode { get; set; }
     }   
 }

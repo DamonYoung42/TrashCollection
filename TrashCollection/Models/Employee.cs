@@ -8,8 +8,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrashCollection.Models
 {
-    public class Employees
+    public class Employee
     {
+        public Employee()
+        {
+
+        }
         [Key]
         public int EmployeeID { get; set; }
         public string FirstName { get; set; }
@@ -20,6 +24,6 @@ namespace TrashCollection.Models
 
         [ForeignKey("Address")]
         public int AddressID { get; set; }
-        public Addresses Address { get; set; }
+        public Address Address { get; set; }
     }
 }
