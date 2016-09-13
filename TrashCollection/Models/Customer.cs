@@ -7,21 +7,26 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrashCollection.Models
 {
-    public class Customers
+    public class Customer
     {
+        public Customer()
+        {
+
+        }
 
         [Key]
         public int CustomerID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Company { get; set; }
+        public string Role { get; set; }
 
         [ForeignKey("EmailAddress")]
         public string EmailAddress { get; set; }
 
         [ForeignKey("Address")]
         public int AddressID { get; set; }
-        public Addresses Address { get; set; }
+        public Address Address { get; set; }
 
     }
 }

@@ -7,17 +7,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrashCollection.Models
 {
-    public class States
+    public class Country
     {
+        public Country()
+        {
+
+        }
         [Key]
-        public string StateID {get; set;}
-        public string StateName {get; set;}
-
-        [ForeignKey("CountryID")]
         public int CountryID { get; set; }
-         
-
-
-
+        public string CountryName { get; set; }
     }
 }
