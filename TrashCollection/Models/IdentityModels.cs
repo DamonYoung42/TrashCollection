@@ -31,16 +31,16 @@ namespace TrashCollection.Models
             return new ApplicationDbContext();
         }
 
-        public DbSet<Addresses> Address { get; set; }
-        public DbSet<Cities> City { get; set; }
-        public DbSet<Countries> Country { get; set; }
-        public DbSet<CustomerPickupJuncture> CustomerPickupJuncture { get; set; }
-        public DbSet<Customers> Customer { get; set; }
-        public DbSet<Employees> Employee { get; set; }
-        public DbSet<Pickups> Pickup { get; set; }
-        public DbSet<States> State { get; set; }
-        public DbSet<Subscriptions> Subscription { get; set; }
-        public DbSet<UserProfile> UserProfile { get; set; }
-        public DbSet<Zipcodes> Zipcode { get; set; }
+        public virtual DbSet<Addresses> Address { get; set; }
+        public virtual DbSet<Cities> City { get; set; }
+        public virtual DbSet<Countries> Country { get; set; }
+        public virtual DbSet<CustomerPickupJuncture> CustomerPickupJuncture { get; set; }
+        public virtual DbSet<Customers> Customer { get; set; }
+        public virtual DbSet<Employees> Employee { get; set; }
+        public virtual DbSet<Pickups> Pickup { get; set; }
+        public virtual DbSet<States> State { get; set; }
+        public virtual DbSet<Subscriptions> Subscription { get; set; }
+        public virtual DbSet<UserProfile> UserProfile { get; set; }
+        public virtual DbSet<Zipcodes> Zipcode { get; set; }
     }
 }
